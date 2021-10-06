@@ -1,0 +1,19 @@
+h1, p {
+  text-align: center;
+}
+
+li:hover {
+  background-color: blueviolet;
+}
+
+li:active {
+  color: beige;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
