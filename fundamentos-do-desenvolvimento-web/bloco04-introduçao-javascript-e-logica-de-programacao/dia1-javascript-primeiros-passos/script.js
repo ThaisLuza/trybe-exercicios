@@ -116,3 +116,39 @@
 // else {
 //   console.log("false");
 // }
+
+
+//EXERCÍCIO 9
+// const a = 10;
+// const b = 12;
+// const c = 20;
+
+// if(a%2 !==0 || b%2 !==0 || c%2 !==0){
+//   console.log("true")
+// }
+// else {
+//   console.log("false");
+// }
+
+
+//EXERCICIO 10
+// const custoProduto = 100;
+// const valorVenda = 200;
+// const imposto = 0.20;
+
+
+// if(custoProduto<=0 || valorVenda <=0){
+//   console.log("Valor inválido");
+// }
+// else{
+//   const custoImposto = (custoProduto * imposto);
+
+//   const custoTotal = (custoImposto + custoProduto);
+
+//   const lucro = (1000*(valorVenda-custoTotal));
+//   console.log(lucro);
+// }
+
+
+
+
