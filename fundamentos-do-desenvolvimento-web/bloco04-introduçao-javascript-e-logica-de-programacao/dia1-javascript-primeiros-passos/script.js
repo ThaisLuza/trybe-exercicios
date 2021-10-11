@@ -45,13 +45,74 @@
 // }
 
 //EXERCÍCIO 4
-const a = -9;
-if (a>0){
-  console.log("positive");
-}
-else if (a<0){
-  console.log("negative");
-}
-else{
-  console.log("zero");
-}
+// const a = -9;
+// if (a>0){
+//   console.log("positive");
+// }
+// else if (a<0){
+//   console.log("negative");
+// }
+// else{
+//   console.log("zero");
+// }
+
+
+//EXERCÍCIO 5
+// const a = 90;
+// const b = 60;
+// const c = 60;
+// if (a+b+c===180){
+//   console.log("true");
+// }
+// else {
+//   console.log("false");
+// }
+
+
+//EXERCÍCIO 6
+// const peca = 'CAVALO';
+// if(peca.toLowerCase() === "cavalo"){
+//   console.log("L");
+// }
+// else{
+//   console.log("erro")
+// }
+
+
+//EXERCÍCIO 7
+// let nota = -109;
+
+// if(nota>100 || nota<0){
+//   console.log("Nota inválida");
+// }
+// else if(nota>=90){
+//   console.log("Parabéns nota A");
+// }
+// else if(nota>=80){
+//   console.log("Parabéns nota B");
+// }
+// else if(nota>=70){
+//   console.log("Parabéns nota C");
+// }
+// else if(nota>=60){
+//   console.log("Sua nota é D");
+// }
+// else if(nota>=50){
+//   console.log("Sua nota é E");
+// }
+// else if(nota<50){
+//   console.log("Sua nota é F");
+// }
+
+
+//EXERCÍCIO 8
+// const a = 11;
+// const b = 13;
+// const c = 25;
+
+// if(a%2===0 || b%2===0 || c%2===0){
+//   console.log("true");
+// }
+// else {
+//   console.log("false");
+// }
