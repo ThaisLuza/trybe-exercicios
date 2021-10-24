@@ -1,40 +1,52 @@
-const button = document.getElementById('add-button');
-const input = document.getElementById('phrases-input');
-const list = document.getElementById('phrases-list');
+let botao = document.querySelector('.botao');
 
-function addPhraseToLocalStorage() {
-  const oldList = JSON.parse(localStorage.getItem('phrases'));
-  const phraseText = input.value;
-  oldList.push(phraseText);
-  localStorage.setItem('phrases', JSON.stringify(oldList));
-  insertPhraseInDOM();
-};
+function addCorDeFundo(){
+    let backgroundColor = document.getElementById('backgroundColor');
+     botao.addEventListener('click', function() {
+       document.body.style.backgroundColor = backgroundColor.value;
+       localStorage.setItem('backgroundColor', backgroundColor.value);
+    }
+ )
+}addCorDeFundo()
 
-function insertPhraseInDOM() {
-  const phrasesList = JSON.parse(localStorage.getItem('phrases'));
-  const listLength = phrasesList.length - 1;
-  const phraseText = phrasesList[listLength];
-  const phrase = document.createElement('li');
-  phrase.innerText = phraseText;
-  list.appendChild(phrase);
-};
+function addCorDoTexto(){
+    let colorText = document.getElementById('colorText');
+    botao.addEventListener('click', function(){
+        document.body.style.color = colorText.value;
+        localStorage.setItem('colorText', colorText.value);
+    }
+ )
+}addCorDoTexto()
 
-function initialRenderization() {
-  if (localStorage.getItem('phrases') === null) {
-    localStorage.setItem('phrases', JSON.stringify([]));
-  } else {
-    const phrasesList = JSON.parse(localStorage.getItem('phrases'));
-    const listLength = phrasesList.length - 1;
-    for (let index = 0; index <= listLength; index += 1) {
-      const listElement = document.createElement('li');
-      listElement.innerText = phrasesList[index];
-      list.appendChild(listElement);
-    };
-  };
-};
+function tamanhoFonte(){
+    let fontSize = document.getElementById('fontSize');
+    botao.addEventListener('click', function(){
+     document.body.style.fontSize = fontSize.value;
+     localStorage.setItem('fontSize', fontSize.value);
+    }
+    )
+} tamanhoFonte()
 
-button.addEventListener('click', addPhraseToLocalStorage);
+function espacamento(){
+    let spacing = document.getElementById('spacing');
+    botao.addEventListener('click', function(){
+     document.body.style.lineHeight = spacing.value;
+     localStorage.setItem('spacing', spacing.value);
+    }
+ )
+} espacamento()
 
-window.onload = function() {
-  initialRenderization();
-};
+function fonte(){
+    let fontFamily = document.getElementById('fontFamily');
+    botao.addEventListener('click', function(){
+        document.body.style.fontFamily = fontFamily.value;
+        localStorage.setItem('fontFamily', fontFamily.value);
+    }
+ )
+}fonte()
+
+document.body.style.fontFamily = localStorage.getItem('fontFamily')
+document.body.style.color = localStorage.getItem('colorText')
+document.body.style.backgroundColor = localStorage.getItem('backgroundColor')
+document.body.style.fontSize = localStorage.getItem('fontSize')
+document.body.style.spacing = localStorage.getItem('spacing')
