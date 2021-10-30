@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <form action="" method="GET">
+  <header class="estilo">
+    <h1>Cadastro de currículo</h1>
+  </header>
+  <section>
+    
+    <fieldset class="estilo">
+      <div>
+        <h4>Insira seus dados pessoais:</h4>
+        <label for="name">Nome Completo</label>
+        <input id="name" type="text" name=""  placeholder="Nome" />
+      </div>
+      <div>
+        <label for="em">E-mail</label>
+        <input id="em" type="text"  placeholder="Email" />
+      </div>
+      <div>
+        <label for="cpf">CPF</label>
+        <input id="cpf" type="text" placeholder="CPF" />
+      </div>
+      <div>
+        <label for="adress">Endereço</label>
+        <input id="adress" type="text"  placeholder="Endereço" />
+      </div>
+      <div>
+        <label for="city">Cidade</label>
+        <input id="city" type="text" placeholder="Cidade" />
+      </div>
+      <div>
+        <label for="input-estado">Estado
+          <select name="estado" id="input-estado" ></select>
+      </div>
+      </label>
+      <label for="casa">
+        <input name="house" type="radio" id="casa" />Casa</label>
+      <label for="apt">
+        <input name="house" type="radio" id="apt" />Apartamento</label>
+    </fieldset>
+  </section>
+  <section id="secao" >
+    <fieldset  class="estilo">
+      <div>
+        <h4>Insira a seguir dados sobre seu último emprego:</h4>
+        <label for="resumo">Um resumo do seu currículo</label>
+        <textarea name="" id="resumo" cols="30" rows="10" >
+</textarea>
+      </div>
+      <div>
+        <label for="cargo">Cargo que ocupava</label>
+        <input type="text" id="cargo"  placeholder="Cargo que ocupava" />
+      </div>
+      <div>
+        <label for="descricao">Descrição do cargo</label>
+        <input id="descricao" type="text"  placeholder="Descrição do cargo" />
+      </div>
+      <div>
+        <label for="">Data de início</label>
+        <input type="date" />
+      </div>
+      <div>
+        <label for="">Data de saída</label>
+        <input type="date">
+      </div>
+      <div>
+        <button class="botao" id="btn" type="submit">Enviar</button>
+        <button class="botao" id="limpar" type="reset">Limpar</button>
+      </div>
+      <div id="todasDiv" ></div>
+    </fieldset>
+  </section>
+  <script src="script.js"></script>
+</form>
+</body>
+</html>
