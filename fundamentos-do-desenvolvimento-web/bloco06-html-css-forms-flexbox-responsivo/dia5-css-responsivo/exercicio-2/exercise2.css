@@ -64,3 +64,24 @@ footer{
   padding: 1rem;
   background-color: lightgoldenrodyellow;
 }
+
+@media screen and (min-width: 800px) {
+  .listas{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;    
+    background-color: lightgoldenrodyellow;
+  }
+
+  .aside-two{
+    font-size: 20px;
+  }
+
+  .main-content{
+    padding: 3rem;
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+}
