@@ -56,14 +56,10 @@ const getValueByNumber = (object,index) =>
 Object.values(object)[index];
 
 //8
-const verifyPair = (obj, key, value) => {
-  const pairs = Object.entries(obj);
-  let isPair = false;
-  for (let pair in pairs) {
-    if (pairs[pair][0] == key && pairs[pair][1] == value) {
-      isPair = true;
-    }
+const verificarPar = (obj, key, value) => {
+  if(obj[key] && obj[key] === value){
+    return true
   }
-  return isPair;
-};
-console.log(verifyPair(lesson3, 'materia', 'Maria Clara'))
+  return false
+}
+
