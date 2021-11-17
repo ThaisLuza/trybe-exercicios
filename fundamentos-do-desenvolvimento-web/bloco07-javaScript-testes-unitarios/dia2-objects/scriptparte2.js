@@ -42,24 +42,23 @@ const valor = (object) => {
 //5
 const allLessons = {};
 Object.assign(allLessons, { lesson1, lesson2, lesson3 });
-//console.log(allLessons);
 
 //6
 const students = () => {
-  let soma = (allLessons.lesson1.numeroEstudantes) + (allLessons.lesson2.numeroEstudantes) + (allLessons.lesson3.numeroEstudantes)
-  return soma
-} 
-students()
+  let soma =
+    allLessons.lesson1.numeroEstudantes +
+    allLessons.lesson2.numeroEstudantes +
+    allLessons.lesson3.numeroEstudantes;
+  return soma;
+};
 
 //7
-const getValueByNumber = (object,index) => 
-Object.values(object)[index];
+const getValueByNumber = (object, index) => Object.values(object)[index];
 
 //8
 const verificarPar = (obj, key, value) => {
-  if(obj[key] && obj[key] === value){
-    return true
+  if (obj[key] && obj[key] === value) {
+    return true;
   }
-  return false
-}
-
+  return false;
+};
