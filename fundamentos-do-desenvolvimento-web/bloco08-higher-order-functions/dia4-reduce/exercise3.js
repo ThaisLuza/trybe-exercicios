@@ -61,8 +61,10 @@ const books = [
   },
 ];
 
-function formatedBookNames() {
- const expectedResult = books.map((item)=> `${item.name} - ${item.genre} - ${item.author.name}`);
- return expectedResult;
+const expectedResult = 43;
+
+function averageAge() {
+ return books.reduce((acc,item)=> acc + (item.releaseYear-item.author.birthYear), 0)/books.length
+
 }
-console.log(formatedBookNames())
+console.log(averageAge())
