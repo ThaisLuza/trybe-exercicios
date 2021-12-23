@@ -1,20 +1,28 @@
+const fetchCoins = async () => {
+  const url = 'https://api.coincap.io/v2/assets';
 
-const API_COIN = 'https://api.coincap.io/v2/assets'
-const ol = document.getElementById('coins-list')
+  const coins = await fetch(url)
+    .then((response) => response.json())
+    .then((data) => data.data)
+    .catch((error) => error.toString());
 
+  return coins;
+}
 
-const arrCoin = () => {
-  fetch(API_COIN).then(response => response.json())
-  .then(result => {
-    result.data.map((item, index)=>{
-      const li = document.createElement('li')
-      li.innerText = `${item.name} ${(item.symbol)}: ${item.priceUsd}`
-      index < 10 && ol.appendChild(li)
-  })
-})
-.catch(err => console.log(`o erro esta aqui ${err}`))
-} 
+const setCoins = async () => {
+  const coins = await fetchCoins();
 
-arrCoin()
+  const coinsList = document.getElementById('coins-list');
 
+  coins
+    .filter((_, index) => index < 10)
+    .forEach((coin) => {
+      const newLi = document.createElement('li');
 
+      newLi.innerText = `${coin.name} (${coin.symbol}): ${coin.priceUsd}`;
+
+      coinsList.appendChild(newLi);
+    });
+}
+
+window.onload = () => setCoins();
