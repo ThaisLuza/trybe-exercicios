@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+ h1 {
+   color: #444;
+   text-align: center;
+   margin-bottom: 30px;
+ }
+
+body {
+  padding: 16px;
+  background-color: rgb(231, 243, 235);
+}
+
+
+.card{
+  font-family: Tahoma;
+  min-width: 180px;
+}
+
+.pokedex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+article {
+  background-color: rgb(140, 197, 140);
+  transition: background-color 0.3s;
+  padding: 12px;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  box-shadow: #333 2px 1px 10px;
+}
+
+article:hover{
+  background-color: rgb(104, 146, 104);
+}
